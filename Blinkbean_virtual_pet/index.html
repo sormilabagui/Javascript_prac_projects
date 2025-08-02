@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Little Blinkbean</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- SECTION 1: INTRO -->
+    <div class="section" id="intro">
+      <h1>Welcome to our digital pet world</h1>
+      <p>This world welcomes u. May ur soul become fluffy and softy with our cute pet. In this fantasy world u can feed ur pet, pat her... but if u forget her, she might sulk and stop talking to u! 🥺 So be warned, this fluffy world has rules: give love and time. 💖</p>
+      <button id="startBtn">Enter</button>
+    </div>
+
+    <!-- SECTION 2: MEETING (Default Blinkbean) -->
+    <div class="section" id="meeting">
+      <img src="image/Untitled design.gif" alt="Blinkbean" id="petImage" />
+      <h3>Welcome partner!! I'm Blinkbean. Nice to see u.</h3>
+      <button onclick="setMood('happy')">Feed Me</button>
+      <button onclick="setMood('sulking')">Ignore Me</button>
+    </div>
+
+    <!-- SECTION 3: HAPPY -->
+    <div class="section" id="happy">
+      <img src="image/Wiggle wiggle I’m happy!!.gif" alt="Happy Blinkbean" />
+      <h3>Yaaay it's yummy! I'm so happy! 💖</h3>
+      <button onclick="setMood('meeting')">Back</button>
+    </div>
+
+    <!-- SECTION 4: SULKING -->
+    <div class="section" id="sulking">
+      <img src="image/sulking pet.gif" alt="Sad Blinkbean" />
+      <h3>You forgot me!! Didn't feed me or pat me... 😞</h3>
+      <button onclick="setMood('meeting')">I'm sorry</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
