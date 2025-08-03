@@ -4,38 +4,103 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+  background-image: url(image/css-course-banner-forground.gif),url(image/css-course-banner-background.png);
+  background-repeat: no-repeat,no-repeat;
+  background-position: top,top;
+  background-size:contain;
+  margin: 70px;
 }
 
 .container {
   padding: 40px 20px;
+  
+  
 }
+
 
 .section {
   display: none;
   padding: 20px;
-  border: 3px dashed #f9a;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
   border-radius: 20px;
-  background-color: #ffe6f0;
+  background-color: transparent;
   margin: 20px auto;
   max-width: 500px;
+  margin-top: 80px;
+  
 }
 
 .section img {
   width: 250px;
   border-radius: 20px;
+  background-color: transparent;
 }
 
 button {
-  background-color: #da8bd9;
-  color: white;
+  background-color: #fcbcd9;
+  color: black;
   border: none;
   padding: 10px 20px;
   margin: 15px 5px;
   border-radius: 12px;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #b967bc;
+  background-color: #ffb3ba;
 }
+@media screen and (max-width: 768px) {
+    .container, .section{
+        width: 90%;
+        padding: 15px;
+    }
+
+    .container h1, .section h1 {
+        font-size: 1.5rem;
+    }
+
+    .container p, .section p {
+        font-size: 0.9rem;
+    }
+
+    .section img{
+        width: 60%;
+        height: auto;
+    }
+
+    button {
+        width: 100px;
+        padding: 10px;
+        margin: 5px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container, .section {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .container h1, .section h1 {
+        font-size: 1.3rem;
+    }
+
+    .container p, .section p {
+        font-size: 0.85rem;
+    }
+
+    .section img {
+        width: 70%;
+    }
+
+    button {
+        width: 90px;
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+}
+
