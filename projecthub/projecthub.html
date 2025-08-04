@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Project Hub</title>
+  <link rel="stylesheet" href="projecthub.css">
+</head>
+<body>
+  <h1>Mini Project Hub</h1>
+  <div id="menu">
+    <button onclick="showProject('counter')">Counter</button>
+    <button onclick="showProject('rps')">Rock Paper Scissors</button>
+    <button onclick="showProject('rndgntr')">Random Number Generator</button>
+    <!-- Add more buttons -->
+  </div>
+
+  <div id="project-container">
+    <!--<div id="counter" class="project">
+      <h2>Counter</h2>
+      <p id="count">0</p>
+      <button onclick="increase()">+</button>
+      <button onclick="decrease()">-</button>
+    </div>-->
+
+    <div id="rps" class="project">
+      <h2>Rock Paper Scissors</h2>
+      <button onclick="playRPS('rock')">Rock</button>
+      <button onclick="playRPS('paper')">Paper</button>
+      <button onclick="playRPS('scissors')">Scissors</button>
+      <p id="rps-result"></p>
+    </div>
+
+    <div id="rndgntr" class="project">
+        <h2>Random Number Generator</h2>
+        <button id="btn">Roll</button><br><br>
+
+        <label id="label1" class="labels"></label><br>
+        <label id="label2" class="labels"></label><br>
+        <label id="label3" class="labels"></label><br>
+    </div>
+
+    <div id="counter" class="project">
+        <h2 id="hid"></h2>
+        <p id="pid"></p>
+
+        <p id="p2id"></p>
+
+        <label id="lbl">0</label>
+        <br>
+        <div id="buttons">
+            <button id="dec" class="btnc">decrease</button>
+            <button id="reset" class="btnc">reset</button>
+            <button id="inc" class="btnc">increase</button>
+        </div>
+    </div>
+    <!-- More project sections hidden initially -->
+  </div>
+
+  <script src="projecthub.js"></script>
+</body>
+</html>

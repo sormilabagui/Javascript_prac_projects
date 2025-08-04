@@ -1,0 +1,46 @@
+.project {
+  display: none;
+  margin-top: 20px;
+}
+
+/* Show only the active project */
+.project.active {
+  display: block;
+}
+
+/* css for random number generator*/
+body{
+    text-align: center;
+}
+#btn{
+    padding: 5px 10px;
+    font-size: 3em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* counter css*/
+.labels{
+    font-size: 3em;
+
+}
+#lbl{
+    display: block;
+    font-size: 10em;
+    text-align: center;
+}
+#buttons{
+    text-align: center;
+}
+.btnc{
+    padding: 10px 20px;
+    color:white;
+    background-color: rgb(143, 71, 191);
+    border-radius: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+.btn:hover{
+    background-color: rgb(208, 137, 206);;
+}
