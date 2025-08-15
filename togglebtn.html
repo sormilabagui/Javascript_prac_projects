@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle button</title>
+    <style>
+        body{
+            background: #FEC8D5;
+            transition: background 0.5s ease;
+        }
+        .contianer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .contianer p{
+            font-weight: 600;
+            padding: 9px;
+        }
+        
+        .btn {
+            width: 138px;
+            height: 72px;
+            background-color: #EDA3B4;
+            border-radius: 49px;
+            padding: 4px; 
+            background: linear-gradient(180deg, #FF8EA9 0%, #FFF2F5 100%);
+        }
+
+        .btn-inner {
+            width: 100%;
+            height: 100%;
+            background-color: #EDA3B4; /* inner background */
+            border-radius: 45px;
+            box-shadow: inset -7px 7px 12.9px #4c4859,
+                        inset 7px 7px 12.3px #121115;
+            position: relative;
+        }
+        .btnstroke{
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(0deg, #FF8EA9 0%, #FFF2F5 100%);
+            position: absolute; 
+            top: 5px;
+            left: 5px;
+            
+            transition: left 0.5s ease; 
+        }
+        button{
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            
+            background-color: #FEC8D5;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #f5bdca;
+        }
+        button:active {
+            background-color: #f9a9b7; 
+        }
+
+        /* When active (night mode) */
+        .btn.active .btnstroke{
+            left: 70px;
+        
+        }
+        /* Night Mode */
+        body.night {
+            background: #2E3246; /* dark navy */
+            color: white;
+            transition: background 0.5s ease;
+        }
+        body.night .btn{
+            padding: 4px; /* acts like border thickness */
+            background: linear-gradient(180deg, #2E3347 0%, #686D80 100%);
+        }
+        body.night .btn-inner {
+            background-color: #2E3246; /* matches background */
+            box-shadow: inset -7px 10px 12.9px #141318,
+                        inset 25px 10px 12.3px #0b0b0f;
+        }
+
+        body.night .btnstroke {
+            background: linear-gradient(0deg, #3A3E54 0%, #4C5068 100%);
+        }
+
+        body.night button {
+            background-color: #4C5068;
+        }
+        
+        body.night button:hover{
+            background-color: #434960;
+        }
+        body.night button:active {
+            background-color: #494d65; 
+            transition: background-color .2s ease;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <div class="contianer">
+        <p>DAY <br>MODE</p>
+        <div class="btn" id="toggle">
+            <div class="btn-inner">
+                <div class="btnstroke">
+                    <button></button>
+                </div>
+            </div>
+        </div>
+        <p>NIGHT <br>MODE</p>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('toggle');
+        const body = document.body;
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('active');
+            body.classList.toggle('night');
+        });
+    </script>
+</body>
+</html>
