@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Progress Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: "Poppins", sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: black;
+        }
+        .contianer{
+            display: flex;
+            width: 420px;
+            padding: 50px;
+            border-radius: 8px;
+            border: 2px solid whitesmoke;
+            background: transparent;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            row-gap: 30px;
+        }
+        .circular-pro{
+            position: relative;
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background: conic-gradient(aqua 3.6deg, rgb(117, 113, 113) 0deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .circular-pro::before{
+            content: "";
+            position: absolute;
+            height: 210px;
+            width: 210px;
+            border-radius: 50%;
+            background-color: black;
+        }
+        .prog-value{
+            position: relative;
+            font-size: 40px;
+            font-weight: 600;
+            color: aqua;
+        }
+        .text{
+            font-size: 30px;
+            font-weight: 500;
+            color: #606060;
+        }
+    </style>
+</head>
+<body>
+    <div class="contianer">
+        <div class="circular-pro">
+            <span class="prog-value">0%</span>
+        </div>
+
+        <span class="text">HTML & CSS</span>
+    </div>
+
+
+    <script>
+        let circularprog = document.querySelector(".circular-pro");
+        let progressvalue = document.querySelector(".prog-value");
+
+        let proStartvalue = 0;
+        let proEndvalue = 100;
+        let speed = 100;
+
+        let progress = setInterval(() => {
+            proStartvalue++;
+
+
+            progressvalue.textContent = `${proStartvalue}%`
+            circularprog.style.background = `conic-gradient(aqua ${proStartvalue * 3.6}deg, rgb(117, 113, 113) 0deg)`
+
+            if(proStartvalue == proEndvalue){
+                clearInterval(progress);
+            }
+            console.log(proStartvalue);
+        },speed);
+    </script>
+</body>
+</html>
