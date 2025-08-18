@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+    <link rel="stylesheet" href="playlist.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <button class="menu-btn"><img src="../playlist/image/arrow.png" alt=""></button>
+            <p>NOW PLAYING</p>
+            <button class="menu-btn"><img src="../playlist/image/MENU.png" alt=""></button>
+        </nav>
+        <div class="middle-cont">
+            <div class="cover">
+                <img src="../playlist/image/pfp.png" alt="cover">
+            </div>
+            <audio controls>
+                <source src="../playlist/media/FIFTY FIFTY - Cupid (Twin Version) (Lyrics).mp3">
+            </audio>
+        </div>
+        <div class="progress">
+            <input class="bar" type="range" value="0" id="bar">
+        </div>
+        <div class="ctrl">
+            <button class="btn"><img src="../playlist/image/prev.png" alt=""></button>
+            <button class="play-btn"><img src="../playlist/image/pause.png" alt=""></button>
+            <button class="btn"><img src="../playlist/image/next.png" alt=""></button>
+        </div>
+    </div>
+    
 
+
+
+    <script src="playlist.js"></script>
+</body>
+</html>
